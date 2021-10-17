@@ -1,0 +1,22 @@
+.logo-container{
+    font-size: 2rem;
+    margin: .5rem;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.logo-container a{
+    text-decoration: none;
+    color: #3b434a;
+    cursor: pointer;
+}
+
+.logo-container .logo-name {
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    .logo-container{
+        font-size: 1.5rem;
+    }
+}

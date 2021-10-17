@@ -1,0 +1,39 @@
+.contact-input-container-field {
+    position: relative;
+}
+
+.contact-input-container-field label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.contact-input-field {
+    padding: .5rem 0;
+    margin-bottom: 37px;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+}
+
+.contact-input-field{
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 2px solid #adadad;
+    width: 100%;
+}
+
+.contact-input-field:focus ~ label,
+.contact-input-field:valid ~ label {
+    top: -15px;
+    left: 0;
+    color: #adadad;
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.button {
+    width: fit-content;
+    margin-top: 20px;
+    padding: 1rem;
+    background-color: #0a3d62;
+    border-radius: 4px;
+    box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color: #f5f6fa;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color:rgba(10, 61, 98, 0.9);
+}

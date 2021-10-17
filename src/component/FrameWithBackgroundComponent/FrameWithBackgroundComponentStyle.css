@@ -1,0 +1,88 @@
+.frameB-container {
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.frameB-container .frameB-title-left {
+    margin: 0;
+    padding-bottom: 1rem;
+    color: #3b434a;
+}
+
+.frameB-container .frameB-title-right {
+    margin: 0;
+    padding-bottom: 1rem;
+    color: #3b434a;
+}
+
+.frameB-title-container {
+    padding: 30px 0;
+    position: relative;
+}
+
+.frameB-title-container span {
+    position: relative;
+    top: 40px;
+    color: rgba(59, 67, 74, 0.1);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 52px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+.frameB-container .frameB-title-left::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #3b434a;
+    bottom: 0;
+    left: 0;
+}
+
+.frameB-container .frameB-title-right::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #3b434a;
+    bottom: 0;
+    right: 0;
+}
+
+.frameB-container .frameB-text-container {
+    position: relative;
+    order: 0;
+    padding-bottom: 3rem;
+    max-width: 65vw;
+    font-size: 1.5rem;
+}
+
+.frameB-description{
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width: 900px) {
+    .frameB-container {
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 3rem;
+        min-height: 100%;
+    }
+
+    .frameB-container .frameB-text-container {
+        order: 0;
+    }
+
+}

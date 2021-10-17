@@ -1,0 +1,42 @@
+.portfolio-container {
+    min-height: 70vh;
+    z-index: 3;
+    position: relative;
+    background: #f5f8fd;
+}
+
+.portfolio-container .portfolio-inner-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 3;
+    flex-wrap: wrap;
+    flex-basis: 10%;
+}
+
+.portfolio-title-container{
+    text-align: right;
+    padding: 30px 0;
+    position: relative;
+}
+
+.portfolio-title-container span{
+    position: relative;
+    top: 40px;
+    color: rgba(59, 67, 74, 0.1);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 102px;
+    text-transform: uppercase;
+    line-height: 0;
+    padding-right: 2rem;
+}
+
+@media (max-width: 800px) {
+    .portfolio-container {
+        height: fit-content;
+    }
+}

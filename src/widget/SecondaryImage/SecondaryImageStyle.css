@@ -1,0 +1,12 @@
+.secondary-image-container{
+    width: fit-content;
+    height: fit-content;
+
+}
+
+.secondary-image-container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 17px;
+    box-shadow: 2px 1px 10px -1px rgba(179,177,179,1);
+}
