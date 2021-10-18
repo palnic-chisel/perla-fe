@@ -18,7 +18,6 @@ import emailjs from 'emailjs-com'
 import WaveDividerWidget from "../../widget/WaveDividerWidget/WaveDividerWidget";
 import ContactInputFieldWidget from "../../widget/ContactInputFieldWidget/ContactInputFieldWidget";
 import ContactTextAreaFieldWidget from "../../widget/ContactTextAreaFieldWidget/ContactTextAreaFieldWidget";
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import {faCopy} from "@fortawesome/free-solid-svg-icons/faCopy";
 
 
@@ -49,7 +48,6 @@ const ContactComponent = ({data}) => {
                     <ContactInputFieldWidget type={'text'} label={'Indirizzo email'} required={true} name={"from_email"}/>
                     <ContactTextAreaFieldWidget label={'Scrivi qualcosa'} required={true} name={"from_text"}/>
                     <input className='button' type='submit'/>
-                    <ButtonComponent onClickFnc={sendEmail} buttonText={"INVIA"}/>
                 </form>
             </div>
 
