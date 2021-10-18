@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import React from 'react';
 
@@ -34,7 +35,7 @@ export const useApi = url => {
                     error: 'fetch failed'
                 });
             });
-    });
+    }, []);
 
     return data;
 };
