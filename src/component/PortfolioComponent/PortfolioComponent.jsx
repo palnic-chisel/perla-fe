@@ -12,7 +12,7 @@ const PortfolioComponent = ({data}) => {
             </div>
             <div className='portfolio-inner-container'>
                 {data.image.map((obj) => (
-                    <PortfolioItemWidget key={obj.id} image={`http://localhost:1337${obj.url}`} description={obj.caption}/>
+                    <PortfolioItemWidget key={obj.id} image={`https://perla-backend.herokuapp.com${obj.url}`} description={obj.caption}/>
                 ))}
             </div>
         </div>

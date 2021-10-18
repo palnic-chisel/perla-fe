@@ -8,7 +8,7 @@ import NavigationBarComponent from "../../component/NavigationBarComponent/Navig
 import LoadingPage from "../LoadingPage/LoadingPage";
 
 const ContactsPage = () => {
-    // const {state, error, data} = useApi('http://localhost:1337/about');
+    // const {state, error, data} = useApi('http://localhost:1337/contacts/1');
     const {state, error, data} = useApi('https://perla-backend.herokuapp.com/contacts/1');
     switch (state) {
         case apiStates.ERROR:

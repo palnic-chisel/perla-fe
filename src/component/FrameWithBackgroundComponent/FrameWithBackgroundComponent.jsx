@@ -33,7 +33,7 @@ const FrameWithBackgroundComponent = ({data}) => {
                                 style={{textAlign: data.captionPosition}}>{data.frameTitle}</h1>
                     </div>
                     <div data-aos='fade-left' className="frameB-description" style={{textAlign: data.captionPosition}}>
-                        {data.frameSecondaryImageYesOrNot && <SecondaryImage position = {data.captionPosition} imageUrl={`http://localhost:1337${data.frameSecondaryImage.url}`}/>}
+                        {data.frameSecondaryImageYesOrNot && <SecondaryImage position = {data.captionPosition} imageUrl={`https://perla-backend.herokuapp.com${data.frameSecondaryImage.url}`}/>}
                         <div style={{paddingRight: data.captionPosition === 'Left' ? '50px' : 0, paddingLeft: data.captionPosition === 'Right' ? '50px' : 0}}><span>{data.caption}</span></div>
                     </div>
 
@@ -45,7 +45,7 @@ const FrameWithBackgroundComponent = ({data}) => {
 
                 <div style={{
                     content: "",
-                    backgroundImage: `url(http://localhost:1337${data.backgroundImage.url})`,
+                    backgroundImage: `url(https://perla-backend.herokuapp.com${data.backgroundImage.url})`,
                     backgroundSize: 'cover',
                     opacity: '0.3',
                     top: '0',

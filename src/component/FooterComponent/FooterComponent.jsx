@@ -2,38 +2,20 @@ import React from 'react';
 import './FooterComponentStyle.css'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {FaFacebookF, FaInstagram, FaLinkedinIn} from "react-icons/fa";
 import {faInstagram, faFacebook, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import InfoBoxWidget from "../../widget/InfoBoxWidget/InfoBoxWidget";
 
 import {apiStates, useApi} from '../../utils/useApi/UseApi.jsx';
-import LandingPageComponent from "../LandingPageComponent/LandingPageComponent";
-import NavigationBarComponent from "../NavigationBarComponent/NavigationBarComponent";
-import ContactComponent from "../ContactComponent/ContactComponent";
 import LoadingPage from "../../pages/LoadingPage/LoadingPage";
-
-const mockContatti = {
-    "id": 1,
-    "Indirizzo": "Corso Regina 10 Torino",
-    "PartitaIva": "1234567890",
-    "NumeroDiTelefono": "1234567890",
-    "Linkedin": "https://www.linkedin.com/feed/",
-    "Facebook": "https://www.facebook.com/",
-    "Instagram": "https://www.instagram.com/",
-    "IndirizzoEmail": "psicologa@psicologa.it",
-    "published_at": "2021-01-23T02:21:53.349Z",
-    "created_at": "2021-01-23T02:21:50.592Z",
-    "updated_at": "2021-01-23T02:21:53.371Z"
-};
 
 
 const FooterComponent = () => {
 
-    const {state, error, data} = useApi('https://perla-backend.herokuapp.com/contacts');
+    const {state, error, data} = useApi('https://perla-backend.herokuapp.com/contacts/1');
     switch (state) {
-        case apiStates.SUCCESS:
-            return <LandingPageComponent/>;
         case apiStates.ERROR:
+            return error;
+        case apiStates.SUCCESS:
 
             const aboutList = [
                 {key: 'Telefono: ', value: `${data.phone}`},

@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import "./LandingPageComponentStyle.css"
-import image from "../../utils/mind.jpg";
 
 import Parallax from 'react-rellax'
 import Aos from 'aos';
@@ -22,16 +21,17 @@ const LandingPageComponent = ({data}) => {
         <div className='landing-page-container'>
             <div className='landing-page-inner-container'>
                 <div data-aos='fade-right' className='landing-page-text-container'>
-                    <Parallax speed={-0.5}><span className='landing-page-section-title'>{data.title}</span></Parallax>
-                    <Parallax speed={1}><span className='landing-page-section-description'>{data.caption} </span>
-                        {data.seeMoreButtonActive && <ButtonComponent buttonText={data.seeMoreButtonText} onClickFnc={scrollTo}/>}
+                    <Parallax speed={-0.5}><span className='landing-page-section-title'>{data?.title}</span></Parallax>
+                    <Parallax speed={1}><span className='landing-page-section-description'>{data?.caption} </span>
+                        {data?.seeMoreButtonActive && <ButtonComponent buttonText={data?.seeMoreButtonText} onClickFnc={scrollTo}/>}
                     </Parallax>
                 </div>
             </div>
 
             <div style={{
                 content: "",
-                backgroundImage: `url(http://localhost:1337${data.backgroundImage.url})`,
+                // backgroundImage: `url(http://localhost:1337${data.backgroundImage.url})`,
+                backgroundImage: `url(https://perla-backend.herokuapp.com${data?.backgroundImage.url})`,
                 backgroundSize: 'cover',
                 opacity: '0.5',
                 top: '0',

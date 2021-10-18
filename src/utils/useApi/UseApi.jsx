@@ -34,7 +34,7 @@ export const useApi = url => {
                     error: 'fetch failed'
                 });
             });
-    }, []);
+    });
 
     return data;
 };

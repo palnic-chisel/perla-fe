@@ -12,7 +12,7 @@ import NavigationBarComponent from "../component/NavigationBarComponent/Navigati
 
 
 const MindfulnessPage = () => {
-    const {state, error, data} = useApi('http://localhost:1337/sections/4');
+    const {state, error, data} = useApi('https://perla-backend.herokuapp.com/pages/4');
     switch (state) {
         case apiStates.ERROR:
             return error;

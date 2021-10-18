@@ -5,7 +5,7 @@ import {Switch, Route} from 'react-router-dom';
 
 import HomePage from "./pages/HomePage";
 import PsicologiaPage from "./pages/PsicologiaPage";
-import PsicoterapiaPage from "./pages/PsicoterapiaPage";
+// import PsicoterapiaPage from "./pages/PsicoterapiaPage";
 import MindfulnessPage from "./pages/MindfulnessPage";
 import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import AboutPage from "./pages/AboutPage";

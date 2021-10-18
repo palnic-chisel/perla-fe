@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React from 'react';
 
 /*Styles import*/
 import './ContactComponentStyle.css'
@@ -10,8 +10,8 @@ import contactImage from '../../utils/Newsletter.png'
 import Parallax from 'react-rellax'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faWhatsapp, faFacebook, faLinkedin, faInstagram} from '@fortawesome/free-brands-svg-icons'
-import {faPhone, faMap, faMapMarked} from '@fortawesome/free-solid-svg-icons'
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+import {faPhone, faMapMarked} from '@fortawesome/free-solid-svg-icons'
+// import MessengerCustomerChat from 'react-messenger-customer-chat';
 import emailjs from 'emailjs-com'
 
 /*Components import*/
@@ -49,7 +49,7 @@ const ContactComponent = ({data}) => {
                     <ContactInputFieldWidget type={'text'} label={'Indirizzo email'} required={true} name={"from_email"}/>
                     <ContactTextAreaFieldWidget label={'Scrivi qualcosa'} required={true} name={"from_text"}/>
                     <input className='button' type='submit'/>
-                    {/*<ButtonComponent onClickFnc={sendEmail} buttonText={"INVIA"}/>*/}
+                    <ButtonComponent onClickFnc={sendEmail} buttonText={"INVIA"}/>
                 </form>
             </div>
 
@@ -72,37 +72,36 @@ const ContactComponent = ({data}) => {
                     </div>
                     <div className='contact-email-number-inner-container'><span>{data.address}</span>
                         <div className='contact-email-image-inner-container'><a target="_blank"
-                                                                                href='https://www.google.it/maps/place/Corso+Regina+Margherita,+10,+10153+Torino+TO'><FontAwesomeIcon
+                                                                                href='https://www.google.it/maps/place/Corso+Regina+Margherita,+10,+10153+Torino+TO' rel="noreferrer"><FontAwesomeIcon
                             color='rgba(46, 49, 49, 1)' icon={faMapMarked} size='1x'/></a></div>
                     </div>
                 </div>
                 <h2>...oppure puoi trovarmi su</h2>
                 <div className='contact-other-image-container'>
                     <div className='contact-other-image-inner-container'><a target="_blank"
-                                                                            href={`https://api.whatsapp.com/send/?phone=${data.phone}`}><FontAwesomeIcon
+                                                                            href={`https://api.whatsapp.com/send/?phone=${data.phone}`} rel="noreferrer"><FontAwesomeIcon
                         color='rgba(123, 239, 178, 1)' icon={faWhatsapp} size='3x'/></a></div>
                     <div className='contact-other-image-inner-container'><a target="_blank"
-                                                                            href={data.facebook}><FontAwesomeIcon
+                                                                            href={data.facebook} rel="noreferrer"><FontAwesomeIcon
                         color='rgba(65, 131, 215, 1)'
                         icon={faFacebook} size='3x'/>
                     </a></div>
                     <div className='contact-other-image-inner-container'><a target="_blank"
-                                                                            href={data.linkedin}><FontAwesomeIcon
+                                                                            href={data.linkedin} rel="noreferrer"><FontAwesomeIcon
                         color='rgba(65, 131, 215, 1)'
                         icon={faLinkedin} size='3x'/>
                     </a></div>
                     <div className='contact-other-image-inner-container'><a target="_blank"
-                                                                            href={data.instagram}><FontAwesomeIcon
+                                                                            href={data.instagram} rel="noreferrer"><FontAwesomeIcon
                         color='rgba(65, 131, 215, 1)'
-                        icon={faInstagram} size='3x'
-                        color='rgba(155, 89, 182, 1)'/>
+                        icon={faInstagram} size='3x'/>
                     </a></div>
                 </div>
             </div>
 
             <Parallax speed={5} percentage={0.9}>
                 <div className='contact-image-container'>
-                    <img src={contactImage}/>
+                    <img alt='contacts' src={contactImage}/>
                 </div>
             </Parallax>
 
