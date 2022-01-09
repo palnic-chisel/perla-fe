@@ -12,13 +12,13 @@ import NavigationBarComponent from "../component/NavigationBarComponent/Navigati
 
 
 const PsicologiaPage = () => {
-    const {state, error, data} = useApi('https://perla-backend.herokuapp.com/pages/4');
+    const {state, error, data} = useApi('https://perla-backend.herokuapp.com/pages/3');
     switch (state) {
         case apiStates.ERROR:
             return error;
         case apiStates.SUCCESS:
             return (
-                <div>
+                <>
                     <NavigationBarComponent/>
                     {data?.content?.map(component => (
                         <div key={component.id}>
@@ -39,7 +39,7 @@ const PsicologiaPage = () => {
 
                     <FooterComponent/>
 
-                </div>
+                </>
             );
         default:
             return (

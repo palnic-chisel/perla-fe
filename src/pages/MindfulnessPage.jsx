@@ -18,7 +18,7 @@ const MindfulnessPage = () => {
             return error;
         case apiStates.SUCCESS:
             return (
-                <div>
+                <>
                     <NavigationBarComponent/>
                     {data?.content?.map(component => (
                         <div key={component.id}>
@@ -30,16 +30,16 @@ const MindfulnessPage = () => {
                             <FrameWithBackgroundComponent data={component}/>
                             }
 
-                            {component.__component === 'page.service' &&
+                            {/* {component.__component === 'page.service' &&
                             <PortfolioComponent data={component}/>
-                            }
+                            } */}
                         </div>
                     ))
                     }
 
-                    <FooterComponent/>
+                    {/* <FooterComponent/> */}
 
-                </div>
+                </>
             );
         default:
             return (

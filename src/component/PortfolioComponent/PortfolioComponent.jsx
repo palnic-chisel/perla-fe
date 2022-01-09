@@ -11,7 +11,7 @@ const PortfolioComponent = ({data}) => {
                 <Parallax speed={1} percentage={1}><span data-aos='fade-left'>{data.title}</span></Parallax>
             </div>
             <div className='portfolio-inner-container'>
-                {data.image.map((obj) => (
+                {data?.image?.map((obj) => (
                     <PortfolioItemWidget key={obj.id} image={`https://perla-backend.herokuapp.com${obj.url}`} description={obj.caption}/>
                 ))}
             </div>

@@ -28,10 +28,10 @@ const LandingPageComponent = ({data}) => {
                 </div>
             </div>
 
-            <div style={{
+            {data?.backgroundImage?.url && <div style={{
                 content: "",
                 // backgroundImage: `url(http://localhost:1337${data.backgroundImage.url})`,
-                backgroundImage: `url(https://perla-backend.herokuapp.com${data?.backgroundImage.url})`,
+                backgroundImage: `url(${data?.backgroundImage.url})`,
                 backgroundSize: 'cover',
                 opacity: '0.5',
                 top: '0',
@@ -39,8 +39,9 @@ const LandingPageComponent = ({data}) => {
                 bottom: '0',
                 right: '0',
                 position: 'absolute',
-                zIndex: '-1'
-            }}/>
+                zIndex: '-1',
+                width: '100%'
+            }}/>}
         </div>
     )
         ;

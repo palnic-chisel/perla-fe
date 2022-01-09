@@ -18,7 +18,7 @@ const AboutPage = () => {
             return error;
         case apiStates.SUCCESS:
             return (
-                <div>
+                <div style={{width:'100%'}}>
                     <NavigationBarComponent/>
                     {data?.content?.map(component => (
                         <div key={component.id}>
@@ -37,7 +37,7 @@ const AboutPage = () => {
                     ))
                     }
 
-                    <FooterComponent/>
+                    {/* <FooterComponent/> */}
 
                 </div>
             );

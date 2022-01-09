@@ -19,7 +19,7 @@ const HomePage = () => {
             return error;
         case apiStates.SUCCESS:
             return (
-                <div>
+                <>
                     <NavigationBarComponent/>
                     {data?.content?.map(component => (
                         <div key={component.id}>
@@ -37,8 +37,8 @@ const HomePage = () => {
                         </div>
                     ))
                     }
-                    <FooterComponent/>
-                </div>
+                    {/* <FooterComponent/> */}
+                </>
             );
         default:
             return (

@@ -4,7 +4,7 @@
 
 .landing-page-inner-container {
     min-height: 100vh;
-    padding: 15vw 12vw 10vw;
+    padding: 20vh 12vw 10vw;
     width: 100%;
     background-size: cover;
     display: flex;
@@ -21,16 +21,42 @@
 }
 
 .landing-page-section-title {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .landing-page-section-description {
-    font-size: 25px;
+    font-size: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    .landing-page-container {
+        width: 100%;
+    }
+
+    .landing-page-inner-container {
+        min-height: 50vh;
+        padding: 20vh 12vw 10vw;
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
     .landing-page-text-container {
-        max-width: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 40rem;
+        color: #3b434a;
+    }
+    
+    .landing-page-section-title {
+        font-size: 30px;
+    }
+    
+    .landing-page-section-description {
+        font-size: 15px;
     }
 }
 

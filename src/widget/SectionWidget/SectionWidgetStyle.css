@@ -2,7 +2,6 @@
     flex-grow: 1;
     align-items: center;
     text-align: center;
-    display: flex;
     flex-basis: auto;
     cursor: pointer;
 }
@@ -29,6 +28,10 @@
     font-weight: bolder;
 }
 
+.sections-links li a:hover {
+    font-weight: bolder;
+}
+
 .sections-links li a::after {
     content: '';
     position: relative;
@@ -49,7 +52,6 @@
 
 @media (max-width: 800px) {
     .sections-links {
-        display: none;
         width: 100%;
     }
 
@@ -59,7 +61,7 @@
     }
 
     .sections-links li {
-        text-align: right;
+        text-align: center;
     }
 
     .sections-links li a {
@@ -67,7 +69,7 @@
         text-shadow: 1px 1px 3px rgba(150, 150, 150, 1);
     }
 
-    .sections-links .active {
-        display: flex;
+    .sections-links li a:hover {
+        font-weight: bolder;
     }
 }

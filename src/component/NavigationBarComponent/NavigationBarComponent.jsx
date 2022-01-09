@@ -4,10 +4,11 @@ import "./NavigationBarComponentStyle.css";
 import LogoComponent from "../LogoComponent/LogoComponent";
 import ToggleButtonComponent from "../ToggleButtonComponent/ToggleButtonComponent";
 import SectionWidget from "../../widget/SectionWidget/SectionWidget";
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const sectionList = [
     {
-        name: "chi sono",
+        name: "formazione",
         linkUrl: "about"
     },
     {
@@ -34,6 +35,8 @@ const NavigationBarComponent = () => {
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [withBack, setWithBack] = useState(true);
+    const [displayMenu, setDisplayMenu] = useState(false);
+    const responsive = useMediaQuery('(min-width: 800px)');
 
     const handleScroll = () => {
         // find current scroll position
@@ -53,15 +56,24 @@ const NavigationBarComponent = () => {
 
     }, [prevScrollPos, withBack, handleScroll]);
 
+    useEffect(() => {
+        if(responsive){
+            setDisplayMenu(true)
+        } else {
+            setDisplayMenu(false)
+        }
+
+    }, [responsive]);
+
     return (
         <header className='navigation' style={{
-            backgroundColor: withBack ? 'transparent' : '#1f2d41',
+            backgroundColor: withBack && responsive ? 'transparent' : '#1f2d41',
             padding: withBack ? '3vw 10vw' : '1vw 10vw'
         }}>
             <nav className="navigation-bar">
-                <LogoComponent withBack={withBack}/>
-                <ToggleButtonComponent withBack={withBack}/>
-                <SectionWidget withBack={withBack} list={sectionList}/>
+                <LogoComponent withBack={withBack} responsive={responsive}/>
+                <ToggleButtonComponent withBack={withBack} burgerHandler={() => setDisplayMenu(!displayMenu)}/>
+                <SectionWidget withBack={withBack} list={sectionList} displayMenu={displayMenu}/>
             </nav>
         </header>
     );
