@@ -24,7 +24,7 @@ const LandingPageComponent = ({ data }) => {
                     <Parallax speed={-0.5}><span className='landing-page-section-title'>{data?.title}</span></Parallax>
                     <Parallax speed={1}>
                         <div className='landing-page-section-description-container'>
-                            <span className='landing-page-section-description'>{data?.caption} </span>
+                            <div className='landing-page-section-description'>{data?.caption} </div>
                         </div>
                         {data?.seeMoreButtonActive && <ButtonComponent buttonText={data?.seeMoreButtonText} onClickFnc={scrollTo} />}
                     </Parallax>
