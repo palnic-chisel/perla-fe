@@ -2,7 +2,7 @@
     width: fit-content;
     margin-top: 20px;
     padding: 1rem;
-    background-color: #0a3d62;
+    background-color: rgba(56, 173, 169, 0.5);
     border-radius: 4px;
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
     text-transform: uppercase;
@@ -16,5 +16,5 @@ a {
 }
 
 .button:hover{
-    background-color:rgba(10, 61, 98, 0.9);
+    background-color:rgba(56, 173, 169, 0.3);
 }

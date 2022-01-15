@@ -4,7 +4,7 @@
 
 .landing-page-inner-container {
     min-height: 100vh;
-    padding: 20vh 12vw 10vw;
+    padding: 28vh 12vw 10vw;
     width: 100%;
     background-size: cover;
     display: flex;
@@ -21,7 +21,7 @@
 }
 
 .landing-page-section-title {
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .landing-page-section-description {

@@ -1,5 +1,4 @@
 .logo-container{
-    font-size: 2rem;
     margin: .5rem;
     display: inline-block;
     white-space: nowrap;
@@ -13,6 +12,20 @@
 
 .logo-container .logo-name {
     font-weight: bold;
+    font-size: 2rem;
+}
+
+.logo-container .logo-lastname {
+    font-size: 2rem;
+}
+
+.logo-container .logo-sub1 {
+    font-size: .8rem;
+}
+
+.logo-container .logo-sub2 {
+    font-weight: bold;
+    font-size: .8rem;
 }
 
 @media (max-width: 400px) {

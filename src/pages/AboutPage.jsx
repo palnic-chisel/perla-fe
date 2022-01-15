@@ -37,7 +37,7 @@ const AboutPage = () => {
                     ))
                     }
 
-                    {/* <FooterComponent/> */}
+                    <FooterComponent/>
 
                 </div>
             );

@@ -88,7 +88,7 @@
     width: fit-content;
     margin-top: 20px;
     padding: 1rem;
-    background-color: #0a3d62;
+    background-color: rgba(45, 152, 218, 1);
     border-radius: 4px;
     box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
     text-transform: uppercase;
@@ -103,7 +103,7 @@ a {
 }
 
 .button:hover{
-    background-color:rgba(10, 61, 98, 0.9);
+    background-color:rgba(45, 152, 218, 0.7);
 }
 
 [data-tooltip] {
@@ -208,6 +208,7 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 0;
     }
 
     .contact-form-container {
@@ -219,13 +220,11 @@ a {
     .contact-other-container {
         z-index: 100;
         max-width: 90vw;
-        flex-direction: row;
-        margin-bottom: 0;
+        margin-right: 0.5rem;
     }
 
     .contact-other-image-container {
         display: flex;
-        flex-direction: column;
         justify-content: space-around;
         margin-top: 1rem;
         margin-bottom: 1rem;

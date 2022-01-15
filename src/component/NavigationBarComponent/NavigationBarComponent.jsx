@@ -12,7 +12,7 @@ const sectionList = [
         linkUrl: "about"
     },
     {
-        name: "psicologa",
+        name: "il mio approccio",
         linkUrl: "psicologia"
     },
     // {
@@ -67,7 +67,7 @@ const NavigationBarComponent = () => {
 
     return (
         <header className='navigation' style={{
-            backgroundColor: withBack && responsive ? 'transparent' : '#1f2d41',
+            backgroundColor: withBack && responsive ? 'transparent' : 'rgba(45, 152, 218, 1)',
             padding: withBack ? '3vw 10vw' : '1vw 10vw'
         }}>
             <nav className="navigation-bar">
