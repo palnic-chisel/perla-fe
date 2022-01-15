@@ -45,7 +45,8 @@ const FrameWithBackgroundComponent = ({ data }) => {
 
                 {data?.backgroundImage?.url && <div style={{
                     content: "",
-                    backgroundImage: `url(${data.backgroundImage.url})`,
+                    // backgroundImage: `url(${data.backgroundImage.url})`,
+                    background: `url(${data?.backgroundImage?.url}) no-repeat center center fixed`, 
                     backgroundSize: 'cover',
                     opacity: '0.3',
                     top: '0',

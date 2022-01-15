@@ -34,7 +34,7 @@ const LandingPageComponent = ({ data }) => {
             {data?.backgroundImage?.url && <div style={{
                 content: "",
                 // backgroundImage: `url(http://localhost:1337${data.backgroundImage.url})`,
-                backgroundImage: `url(${data?.backgroundImage.url})`,
+                background: `url(${data?.backgroundImage?.url}) no-repeat center center fixed`, 
                 backgroundSize: 'cover',
                 opacity: '0.5',
                 top: '0',

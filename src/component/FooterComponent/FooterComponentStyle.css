@@ -92,6 +92,11 @@
 }
 
 @media (max-width: 800px) {
+
+    .footer-container{
+        margin-top: 5px;
+    }
+
     .footer-inner-container {
         flex-direction: column;
         justify-content: space-around;
