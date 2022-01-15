@@ -33,7 +33,7 @@ const FrameWithBackgroundComponent = ({ data }) => {
                     </div>
                     <div data-aos='fade-left' className="frameB-description" style={{ textAlign: data.captionPosition }}>
                         {data.frameSecondaryImageYesOrNot && <SecondaryImage position={data.captionPosition} imageUrl={`${data?.frameSecondaryImage?.url}`} />}
-                        <div className='frameB-caption-container' style={{ paddingRight: data.captionPosition === 'Left' ? '50px' : '10px', paddingLeft: data.captionPosition === 'Right' ? '50px' : '10px' }}><div>{data.caption}</div></div>
+                        <div className='frameB-caption-container' style={{ paddingRight: data.captionPosition === 'Left' ? '50px' : '10px', paddingLeft: data.captionPosition === 'Right' ? '50px' : '10px' }}><div className='frame-caption'>{data.caption}</div></div>
                     </div>
 
                 </div>
@@ -47,7 +47,7 @@ const FrameWithBackgroundComponent = ({ data }) => {
                     // backgroundImage: `url(${data.backgroundImage.url})`,
                     background: `url(${data?.backgroundImage?.url}) no-repeat center center fixed`, 
                     backgroundSize: 'cover',
-                    opacity: '0.3',
+                    opacity: '0.5',
                     top: '0',
                     left: '0',
                     bottom: '0',

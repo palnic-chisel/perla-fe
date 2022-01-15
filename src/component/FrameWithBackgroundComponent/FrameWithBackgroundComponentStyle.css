@@ -13,7 +13,7 @@
 .frameB-container .frameB-title-left {
     margin: 0;
     padding-bottom: 1rem;
-    color: #3b434a;
+    color: #202428;
 }
 
 .frameB-container .frameB-title-right {
@@ -29,7 +29,7 @@
 
 .frameB-title-container span {
     position: relative;
-    color: rgba(59, 67, 74, 0.1);
+    color: rgba(0, 0, 0, 0.3);
     left: 0;
     right: 0;
     z-index: 1;
@@ -37,6 +37,10 @@
     font-size: 52px;
     text-transform: uppercase;
     line-height: 0;
+}
+
+.frame-caption{
+    color: rgba(0,0,0,0.8)
 }
 
 .frameB-container .frameB-title-left::after {
@@ -47,7 +51,7 @@
     background: #3b434a;
     bottom: 0;
     left: 0;
-    
+
 }
 
 .frameB-container .frameB-title-right::after {
@@ -69,13 +73,13 @@
     font-size: 20px;
 }
 
-.frameB-description{
+.frameB-description {
     display: flex;
     align-items: center;
     font-weight: bold;
 }
 
-.frameB-caption-container{
+.frameB-caption-container {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 10px;
@@ -102,21 +106,21 @@
     .frameB-container {
         width: 100%;
     }
-    
+
     .frameB-inner-container {
-        
+
         padding-left: 2rem;
         padding-right: 2rem;
         padding-top: 3rem;
         min-height: 100%;
         width: 100%;
     }
-    
+
     .frameB-title-container {
         padding: 10px 0;
         position: relative;
     }
-    
+
     .frameB-title-container span {
         position: relative;
         color: rgba(59, 67, 74, 0.4);
@@ -128,7 +132,7 @@
         text-transform: uppercase;
         line-height: 0;
     }
-    
+
     .frameB-container .frameB-title-left::after {
         content: '';
         position: absolute;
@@ -137,9 +141,9 @@
         background: #3b434a;
         bottom: 0;
         left: 0;
-        
+
     }
-    
+
     .frameB-container .frameB-title-right::after {
         content: '';
         position: absolute;
@@ -150,7 +154,7 @@
         bottom: 0;
         right: 0;
     }
-    
+
     .frameB-container .frameB-text-container {
         position: relative;
         order: 0;
@@ -159,8 +163,8 @@
         width: 100%;
         font-size: 15px;
     }
-    
-    .frameB-description{
+
+    .frameB-description {
         display: flex;
         align-items: center;
     }
