@@ -18,9 +18,8 @@ const FrameWithBackgroundComponent = ({ data }) => {
         <div className='frameB-container'>
             <div className="frameB-inner-container"
                 style={{
-                    alignItems: data.captionPosition === 'Left' ? "flex-start" : "flex-end",
-                    minHeight: data.frameSize === "Big" ? "100vh" : "50vh",
-                    width: '90%'
+                    // alignItems: data.captionPosition === 'Left' ? "flex-start" : "flex-end",
+                    // minHeight: data.frameSize === "Big" ? "100vh" : "50vh",
                 }}>
 
                 <div className="frameB-text-container" style={{ textAlign: data.captionPosition }}>
@@ -34,7 +33,7 @@ const FrameWithBackgroundComponent = ({ data }) => {
                     </div>
                     <div data-aos='fade-left' className="frameB-description" style={{ textAlign: data.captionPosition }}>
                         {data.frameSecondaryImageYesOrNot && <SecondaryImage position={data.captionPosition} imageUrl={`${data?.frameSecondaryImage?.url}`} />}
-                        <div className='frameB-caption-container' style={{ paddingRight: data.captionPosition === 'Left' ? '50px' : 0, paddingLeft: data.captionPosition === 'Right' ? '50px' : 0 }}><div>{data.caption}</div></div>
+                        <div className='frameB-caption-container' style={{ paddingRight: data.captionPosition === 'Left' ? '50px' : '10px', paddingLeft: data.captionPosition === 'Right' ? '50px' : '10px' }}><div>{data.caption}</div></div>
                     </div>
 
                 </div>

@@ -104,7 +104,7 @@
     }
     
     .frameB-inner-container {
-        padding: .5vw;
+        
         padding-left: 2rem;
         padding-right: 2rem;
         padding-top: 3rem;
@@ -155,7 +155,8 @@
         position: relative;
         order: 0;
         padding-bottom: 3rem;
-        max-width: 75vw;
+        /* max-width: 75vw; */
+        width: 100%;
         font-size: 15px;
     }
     
