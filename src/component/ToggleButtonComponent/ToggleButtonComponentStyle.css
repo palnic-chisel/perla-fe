@@ -1,14 +1,11 @@
 .toggle-button {
     position: absolute;
-    top: .8rem;
+    top: 1.5rem;
     right: .5rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     padding: .3rem .3rem;
-    border-radius: .25rem;
-    border: 1px solid #3b434a;
-    height: 5vh;
 }
 
 @media(max-width: 800px){

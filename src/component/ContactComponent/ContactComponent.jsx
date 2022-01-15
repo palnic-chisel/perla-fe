@@ -40,17 +40,6 @@ const ContactComponent = ({ data }) => {
     return (
         <div className='contact-container'>
 
-            <div className='contact-form-container'>
-                <h1>Contattami</h1>
-                <form onSubmit={sendEmail}>
-                    <ContactInputFieldWidget type={'text'} label={'Nome'} required={true} name={"from_name"} />
-                    <ContactInputFieldWidget type={'text'} label={'Numero di telefono'} required={true} name={"from_number"} />
-                    <ContactInputFieldWidget type={'text'} label={'Indirizzo email'} required={true} name={"from_email"} />
-                    <ContactTextAreaFieldWidget label={'Scrivi qualcosa'} required={true} name={"from_text"} />
-                    <input className='button' type='submit' />
-                </form>
-            </div>
-
             <div className='contact-other-container'>
                 <h1>I miei riferimenti:</h1>
                 <div className='contact-email-number-container'>
@@ -70,7 +59,7 @@ const ContactComponent = ({ data }) => {
                     </div>
                     <div className='contact-email-number-inner-container'><span>{data.address}</span>
                         <div className='contact-email-image-inner-container'><a target="_blank"
-                            href='https://www.google.it/maps/place/Corso+Regina+Margherita,+10,+10153+Torino+TO' rel="noreferrer"><FontAwesomeIcon
+                            href='https://www.google.it/maps/place/Piazza+Enrico+Toti,+15,+10153+Torino+TO/' rel="noreferrer"><FontAwesomeIcon
                                 color='rgba(46, 49, 49, 1)' icon={faMapMarked} size='1x' /></a></div>
                     </div>
                 </div>
@@ -95,6 +84,17 @@ const ContactComponent = ({ data }) => {
                             icon={faInstagram} size='3x' />
                     </a></div>
                 </div>
+            </div>
+
+            <div className='contact-form-container'>
+                <h1>Contattami</h1>
+                <form onSubmit={sendEmail}>
+                    <ContactInputFieldWidget type={'text'} label={'Nome'} required={true} name={"from_name"} />
+                    <ContactInputFieldWidget type={'text'} label={'Numero di telefono'} required={true} name={"from_number"} />
+                    <ContactInputFieldWidget type={'text'} label={'Indirizzo email'} required={true} name={"from_email"} />
+                    <ContactTextAreaFieldWidget label={'Scrivi qualcosa'} required={true} name={"from_text"} />
+                    <input className='button' type='submit' />
+                </form>
             </div>
 
             <Parallax speed={5} percentage={0.9}>

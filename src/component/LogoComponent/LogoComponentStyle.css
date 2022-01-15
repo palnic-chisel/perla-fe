@@ -28,8 +28,22 @@
     font-size: .8rem;
 }
 
-@media (max-width: 400px) {
-    .logo-container{
+@media (max-width: 800px) {
+    .logo-container .logo-name {
+        font-weight: bold;
         font-size: 1.5rem;
+    }
+    
+    .logo-container .logo-lastname {
+        font-size: 1.5rem;
+    }
+    
+    .logo-container .logo-sub1 {
+        font-size: .6rem;
+    }
+    
+    .logo-container .logo-sub2 {
+        font-weight: bold;
+        font-size: .6rem;
     }
 }

@@ -7,7 +7,10 @@ import "./ToggleButtonComponentStyle.css"
 const ToggleButtonComponent = ({ withBack, burgerHandler }) => {
     return (
         <div className='toggle-button' onClick={burgerHandler}>
-            <FontAwesomeIcon icon={faBars} color='white' />
+            <FontAwesomeIcon style={{
+                width: '20px',
+                height: '20px'
+            }} icon={faBars} color='white' />
         </div>
     );
 };
