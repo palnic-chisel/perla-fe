@@ -57,7 +57,15 @@
     
     .landing-page-section-description {
         font-size: 15px;
+        font-weight: bold;
     }
+
+}
+
+.landing-page-section-description-container{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 

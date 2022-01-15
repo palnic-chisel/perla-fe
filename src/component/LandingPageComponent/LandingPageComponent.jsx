@@ -1,20 +1,20 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import "./LandingPageComponentStyle.css"
 
 import Parallax from 'react-rellax'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
-import {animateScroll as scroll} from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 const scrollTo = () => {
     scroll.scrollTo(window.innerHeight);
 }
 
-const LandingPageComponent = ({data}) => {
+const LandingPageComponent = ({ data }) => {
 
     useEffect(() => {
-        Aos.init({duration: 500});
+        Aos.init({ duration: 500 });
     }, []);
 
     return (
@@ -22,8 +22,11 @@ const LandingPageComponent = ({data}) => {
             <div className='landing-page-inner-container'>
                 <div data-aos='fade-right' className='landing-page-text-container'>
                     <Parallax speed={-0.5}><span className='landing-page-section-title'>{data?.title}</span></Parallax>
-                    <Parallax speed={1}><span className='landing-page-section-description'>{data?.caption} </span>
-                        {data?.seeMoreButtonActive && <ButtonComponent buttonText={data?.seeMoreButtonText} onClickFnc={scrollTo}/>}
+                    <Parallax speed={1}>
+                        <div className='landing-page-section-description-container'>
+                            <span className='landing-page-section-description'>{data?.caption} </span>
+                        </div>
+                        {data?.seeMoreButtonActive && <ButtonComponent buttonText={data?.seeMoreButtonText} onClickFnc={scrollTo} />}
                     </Parallax>
                 </div>
             </div>
@@ -41,7 +44,7 @@ const LandingPageComponent = ({data}) => {
                 position: 'absolute',
                 zIndex: '-1',
                 width: '100%'
-            }}/>}
+            }} />}
         </div>
     )
         ;

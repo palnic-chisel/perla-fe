@@ -34,7 +34,7 @@ const FrameWithBackgroundComponent = ({ data }) => {
                     </div>
                     <div data-aos='fade-left' className="frameB-description" style={{ textAlign: data.captionPosition }}>
                         {data.frameSecondaryImageYesOrNot && <SecondaryImage position={data.captionPosition} imageUrl={`${data?.frameSecondaryImage?.url}`} />}
-                        <div style={{ paddingRight: data.captionPosition === 'Left' ? '50px' : 0, paddingLeft: data.captionPosition === 'Right' ? '50px' : 0 }}><span>{data.caption}</span></div>
+                        <div className = 'frameB-caption-container' style={{ paddingRight: data.captionPosition === 'Left' ? '50px' : 0, paddingLeft: data.captionPosition === 'Right' ? '50px' : 0 }}><span>{data.caption}</span></div>
                     </div>
 
                 </div>
