@@ -32,6 +32,7 @@
 @media (max-width: 800px) {
     .landing-page-container {
         width: 100%;
+        padding-top: 20px;
     }
 
     .landing-page-inner-container {
