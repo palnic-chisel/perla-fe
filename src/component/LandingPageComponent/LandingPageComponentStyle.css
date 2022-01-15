@@ -27,6 +27,7 @@
 .landing-page-section-description {
     font-size: 20px;
     font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 800px) {
@@ -44,7 +45,7 @@
         flex-direction: column;
         justify-content: center;
     }
-    
+
     .landing-page-text-container {
         display: flex;
         flex-direction: column;
@@ -52,22 +53,20 @@
         max-width: 40rem;
         color: #3b434a;
     }
-    
+
     .landing-page-section-title {
         font-size: 30px;
     }
-    
+
     .landing-page-section-description {
         font-size: 15px;
     }
 
 }
 
-.landing-page-section-description-container{
+.landing-page-section-description-container {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     padding: 10px;
     margin-top: 10px;
 }
-
-
