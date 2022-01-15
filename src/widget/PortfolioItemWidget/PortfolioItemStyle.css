@@ -1,7 +1,7 @@
 
 .portfolio-item-image-container {
-    width: 40vh;
-    height: 40vh;
+    width: 30vh;
+    height: 30vh;
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     background-color: rgba(255, 255, 255, .8);
@@ -15,8 +15,8 @@
 }
 
 .portfolio-item-container img {
-    height: 40vh;
-    width: 40vh;
+    height: 30vh;
+    width: 30vh;
     transition: 0.5s all ease-in-out;
 }
 

@@ -25,11 +25,12 @@
 }
 
 .sections-links .active {
-    font-weight: bolder;
+    font-weight: 900;
+    font-size: larger;
 }
 
 .sections-links li a:hover {
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 .sections-links li a::after {

@@ -13,7 +13,7 @@ const SectionWidget = ({ withBack, list, active, history, match, displayMenu }) 
         } else if (responsive) {
             if (withBack) {
                 return {
-                    color: '#3b434a',
+                    color: '#3b434a', fontWeight: 'bold'
                 }
             } else {
                 return { color: '#f5f6fa' }
