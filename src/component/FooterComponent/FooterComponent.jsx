@@ -4,7 +4,7 @@ import './FooterComponentStyle.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faInstagram, faFacebook, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import InfoBoxWidget from "../../widget/InfoBoxWidget/InfoBoxWidget";
-
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import {apiStates, useApi} from '../../utils/useApi/UseApi.jsx';
 import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 
@@ -12,6 +12,7 @@ import LoadingPage from "../../pages/LoadingPage/LoadingPage";
 const FooterComponent = () => {
 
     const {state, error, data} = useApi('https://perla-backend.herokuapp.com/contacts/1');
+    const responsive = useMediaQuery('(min-width: 800px)');
     switch (state) {
         case apiStates.ERROR:
             return error;
@@ -51,8 +52,8 @@ const FooterComponent = () => {
                         </div>
                     </div>
 
-                    <hr className='footer-divider'/>
-                    <div className='footer-copyright-container'><p className=''>Copyright blackout-chisel 2020</p></div>
+                    {responsive && <hr className='footer-divider'/>}
+                    {responsive &&<div className='footer-copyright-container'><p className=''>Copyright blackout-chisel 2020</p></div>}
                 </div>
             );
         default:

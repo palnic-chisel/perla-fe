@@ -31,19 +31,6 @@
     background-color: rgba(45, 152, 218, 1);
 }
 
-@media (max-width: 800px) {
-    .footer-inner-container {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        background-color: white;
-    }
-
-    .about-box-info .footer-box-info {
-        width: 90%;
-    }
-}
-
 .footer-box-info .footer-social-info-list {
     margin: 0;
     padding: 0;
@@ -102,4 +89,32 @@
 
 .about-box-info {
     background-color: rgba(45, 152, 218, 1);
+}
+
+@media (max-width: 800px) {
+    .footer-inner-container {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+    }
+
+    .footer-box-info {
+        width: 97%;
+        padding: 1rem 1rem 0.5rem;
+    }
+
+    .footer-box-info h4{
+        font-size: 10px;
+    }
+
+    .footer-social-container {
+        min-height: 100%;
+    }
+
+    .footer-personal-info-list {
+        width: 100%;
+        font-size: 12px;
+    }
+
 }
