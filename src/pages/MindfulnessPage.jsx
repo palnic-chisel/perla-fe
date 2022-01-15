@@ -5,7 +5,7 @@ import {apiStates, useApi} from '../utils/useApi/UseApi.jsx';
 /*Components Import*/
 import LandingPageComponent from "../component/LandingPageComponent/LandingPageComponent";
 import FrameWithBackgroundComponent from "../component/FrameWithBackgroundComponent/FrameWithBackgroundComponent";
-import PortfolioComponent from "../component/PortfolioComponent/PortfolioComponent";
+// import PortfolioComponent from "../component/PortfolioComponent/PortfolioComponent";
 import FooterComponent from "../component/FooterComponent/FooterComponent";
 import LoadingPage from "./LoadingPage/LoadingPage";
 import NavigationBarComponent from "../component/NavigationBarComponent/NavigationBarComponent";
