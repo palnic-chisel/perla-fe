@@ -9,6 +9,7 @@ import PortfolioComponent from "../component/PortfolioComponent/PortfolioCompone
 import FooterComponent from "../component/FooterComponent/FooterComponent";
 import LoadingPage from "./LoadingPage/LoadingPage";
 import NavigationBarComponent from "../component/NavigationBarComponent/NavigationBarComponent";
+import SpeedDialWidget from "../widget/SpeedDialWidget/SpeedDialWidget";
 
 
 const HomePage = () => {
@@ -19,8 +20,9 @@ const HomePage = () => {
             return error;
         case apiStates.SUCCESS:
             return (
-                <>
+                <div style={{position: 'relative'}}>
                     <NavigationBarComponent/>
+                    
                     {data?.content?.map(component => (
                         <div key={component.id}>
                             {component.__component === 'page.landing' &&
@@ -34,11 +36,13 @@ const HomePage = () => {
                             {component.__component === 'page.service' &&
                                 <PortfolioComponent data={component}/>
                             }
+                            
                         </div>
                     ))
                     }
                     <FooterComponent/>
-                </>
+                    <SpeedDialWidget/>
+                </div>
             );
         default:
             return (

@@ -35,8 +35,6 @@ const ContactComponent = ({ data }) => {
         e.target.reset();
     }
 
-    console.log(data)
-
     return (
         <div className='contact-container'>
 
