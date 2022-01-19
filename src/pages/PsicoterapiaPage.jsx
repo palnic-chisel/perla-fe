@@ -9,6 +9,7 @@ import PortfolioComponent from "../component/PortfolioComponent/PortfolioCompone
 import FooterComponent from "../component/FooterComponent/FooterComponent";
 import LoadingPage from "./LoadingPage/LoadingPage";
 import NavigationBarComponent from "../component/NavigationBarComponent/NavigationBarComponent";
+import SpeedDialWidget from "../widget/SpeedDialWidget/SpeedDialWidget";
 
 
 const PsicoterapiaPage = () => {
@@ -38,7 +39,7 @@ const PsicoterapiaPage = () => {
                     }
 
                     <FooterComponent/>
-
+                    <SpeedDialWidget/>
                 </div>
             );
         default:

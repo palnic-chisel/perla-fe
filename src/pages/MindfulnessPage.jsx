@@ -9,6 +9,7 @@ import FrameWithBackgroundComponent from "../component/FrameWithBackgroundCompon
 import FooterComponent from "../component/FooterComponent/FooterComponent";
 import LoadingPage from "./LoadingPage/LoadingPage";
 import NavigationBarComponent from "../component/NavigationBarComponent/NavigationBarComponent";
+import SpeedDialWidget from "../widget/SpeedDialWidget/SpeedDialWidget";
 
 
 const MindfulnessPage = () => {
@@ -38,7 +39,7 @@ const MindfulnessPage = () => {
                     }
 
                     <FooterComponent/>
-
+                    <SpeedDialWidget/>
                 </>
             );
         default:
