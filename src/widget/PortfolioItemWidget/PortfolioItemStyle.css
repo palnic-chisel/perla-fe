@@ -15,8 +15,8 @@
 }
 
 .portfolio-item-container img {
-    height: 30vh;
-    width: 30vh;
+    height: 100%;
+    width: 100%;
     transition: 0.5s all ease-in-out;
 }
 

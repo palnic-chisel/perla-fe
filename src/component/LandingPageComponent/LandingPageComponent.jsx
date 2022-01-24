@@ -6,6 +6,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { animateScroll as scroll } from "react-scroll";
+import ReactMarkdown from 'react-markdown'
 
 const scrollTo = () => {
     scroll.scrollTo(window.innerHeight);
@@ -24,7 +25,7 @@ const LandingPageComponent = ({ data }) => {
                     <Parallax speed={-0.5}><span className='landing-page-section-title'>{data?.title}</span></Parallax>
                     <Parallax speed={1}>
                         <div className='landing-page-section-description-container'>
-                            <div className='landing-page-section-description'>{data?.caption} </div>
+                            <div className='landing-page-section-description'><ReactMarkdown>{data?.richCaption}</ReactMarkdown> </div>
                         </div>
                         {data?.seeMoreButtonActive && <ButtonComponent buttonText={data?.seeMoreButtonText} onClickFnc={scrollTo} />}
                     </Parallax>
@@ -33,7 +34,6 @@ const LandingPageComponent = ({ data }) => {
 
             {data?.backgroundImage?.url && <div style={{
                 content: "",
-                // backgroundImage: `url(http://localhost:1337${data.backgroundImage.url})`,
                 background: `url(${data?.backgroundImage?.url})  center center fixed`, 
                 backgroundSize: 'cover',
                 opacity: '0.6',

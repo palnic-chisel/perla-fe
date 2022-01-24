@@ -13,7 +13,7 @@ import SpeedDialWidget from "../widget/SpeedDialWidget/SpeedDialWidget";
 
 
 const HomePage = () => {
-    // const {state, error, data} = useApi('http://localhost:1337/pages/1');
+    // const {state, error, data} = useApi('http://localhost:1337/pages/2');
     const {state, error, data} = useApi('https://perla-backend.herokuapp.com/pages/1');
     switch (state) {
         case apiStates.ERROR:
