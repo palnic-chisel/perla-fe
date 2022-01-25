@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
-/*Styles import*/
-import './PortfolioItemStyle.css'
+/* Styles import */
+import './PortfolioItemStyle.css';
 
-const PortfolioItemWidget = ({image, description}) => {
-    return (
-        <div data-aos="zoom-in" className='portfolio-item-container'>
-            <div className='portfolio-item-image-container'><img alt='service' src={image}/></div>
-            <p>{description}</p>
-        </div>
-    );
-};
+function PortfolioItemWidget({ image, description }) {
+  return (
+    <div data-aos="zoom-in" className="portfolio-item-container">
+      <div className="portfolio-item-image-container"><img alt="service" src={image} /></div>
+      <p>{description}</p>
+    </div>
+  );
+}
 
 export default PortfolioItemWidget;
