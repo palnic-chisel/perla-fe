@@ -8,7 +8,7 @@
         "airbnb"
     ],
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 2020,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
@@ -18,7 +18,31 @@
         "react"
     ],
     "rules": {
+        "import/no-named-as-default": 0,
         "linebreak-style": 0,
-        "react/prop-types": 0
+        "no-plusplus": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/prop-types": "off",
+        "max-len": 0,
+        "import/no-unresolved": [
+            2,
+            {
+                "caseSensitive": false
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ]
     }
 }
