@@ -11,7 +11,7 @@ export const useApi = (url) => {
     state: apiStates.LOADING,
     error: '',
     data: [],
-  });
+  }, []);
 
   const setPartData = (partialData) => setData({ ...data, ...partialData });
 
