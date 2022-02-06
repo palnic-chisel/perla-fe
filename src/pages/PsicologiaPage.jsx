@@ -2,6 +2,7 @@
 import React from 'react';
 
 import { apiStates, useApi } from '../utils/useApi/UseApi';
+import { Helmet } from "react-helmet";
 
 /* Components Import */
 import LandingPageComponent from '../component/LandingPageComponent/LandingPageComponent';
@@ -20,17 +21,23 @@ function PsicologiaPage() {
     case apiStates.SUCCESS:
       return (
         <>
+          <Helmet>
+            <meta charSet="utf-8" />
+            <meta name="description" content="Chiara Ganga, psicologa e istruttrice di Mindfulness a Torino e Online. Psicologa, specializzanda in psicoterapia della Gestalt presso l'Istituto SGT di Torino. Psicologa per bambini, adolescenti e adulti. Puoi contattarmi telefonicamente oppure su Whatsapp al +39 3450383042 oppure via mail e social" />
+            <title>Psicologa Chiara Ganga - Il mio approccio</title>
+            <link rel="canonical" href="https://psicologachiaraganga.netlify.app/psicologia" />
+          </Helmet>
           <NavigationBarComponent />
           {data?.content?.map((component) => (
             <div key={component.id}>
               {component.__component === 'page.landing'
-                            && <LandingPageComponent data={component} />}
+                && <LandingPageComponent data={component} />}
 
               {component.__component === 'page.frame'
-                            && <FrameWithBackgroundComponent data={component} />}
+                && <FrameWithBackgroundComponent data={component} />}
 
               {component.__component === 'page.service'
-                            && <PortfolioComponent data={component} />}
+                && <PortfolioComponent data={component} />}
             </div>
           ))}
 
