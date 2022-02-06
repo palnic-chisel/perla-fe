@@ -12,7 +12,7 @@ function PortfolioComponent({ data }) {
       </div>
       <div className="portfolio-inner-container">
         {data?.image?.map((obj) => (
-          <PortfolioItemWidget key={obj.id} image={`${obj.url}`} description={obj.caption} />
+          <PortfolioItemWidget key={obj.id} image={`${obj.url}`} description={obj.caption} redirect={obj.name} />
         ))}
       </div>
     </div>

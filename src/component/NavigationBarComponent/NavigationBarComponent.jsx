@@ -34,24 +34,27 @@ function NavigationBarComponent() {
   const [displayMenu, setDisplayMenu] = useState(false);
   const responsive = useMediaQuery('(min-width: 800px)');
 
-  const handleScroll = () => {
-    // find current scroll position
-    const currentScrollPos = window.pageYOffset;
 
-    // set state based on location info (explained in more detail below)
-    setWithBack((prevScrollPos > currentScrollPos
-        && prevScrollPos - currentScrollPos > 70)
-        || currentScrollPos < 10);
-
-    // set state to new scroll position
-    setPrevScrollPos(currentScrollPos);
-  };
 
   useEffect(() => {
+
+    const handleScroll = () => {
+      // find current scroll position
+      const currentScrollPos = window.pageYOffset;
+  
+      // set state based on location info (explained in more detail below)
+      setWithBack((prevScrollPos > currentScrollPos
+          && prevScrollPos - currentScrollPos > 70)
+          || currentScrollPos < 10);
+  
+      // set state to new scroll position
+      setPrevScrollPos(currentScrollPos);
+    };
+
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, withBack, handleScroll]);
+  }, [prevScrollPos, withBack]);
 
   useEffect(() => {
     if (responsive) {
