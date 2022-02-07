@@ -86,7 +86,6 @@
 }
 
 .button {
-    width: 100%;
     margin-top: 20px;
     padding: 1rem;
     background-color: rgba(45, 152, 218, 1);
@@ -96,6 +95,10 @@
     letter-spacing: 0.15rem;
     color: #f5f6fa;
     cursor: pointer;
+}
+
+#submitMail{
+    width: 100%;
 }
 
 a {
@@ -247,7 +250,7 @@ a {
         height: 30px;
     }
 
-    .button{
+    #submitMail{
         font-size: 10px;
         margin: 0;
         padding: 10px;

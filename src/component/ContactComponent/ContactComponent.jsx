@@ -187,7 +187,7 @@ function ContactComponent({ data }) {
           <ContactInputFieldWidget type="text" label="Numero di telefono" required name="from_number" />
           <ContactInputFieldWidget type="text" label="Indirizzo email" required name="from_email" />
           <ContactTextAreaFieldWidget label="Scrivi qualcosa" required name="from_text" />
-          <input className="button" type="submit" />
+          <input id = 'submitMail' className="button" type="submit" />
         </form>
       </div>
 
