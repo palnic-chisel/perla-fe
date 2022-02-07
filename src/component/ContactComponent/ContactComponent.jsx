@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 /* Styles import */
 import './ContactComponentStyle.css';
@@ -14,6 +14,8 @@ import {
 import { faPhone, faMapMarked } from '@fortawesome/free-solid-svg-icons';
 // import MessengerCustomerChat from 'react-messenger-customer-chat';
 import emailjs from 'emailjs-com';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 /* Components import */
 import { faCopy } from '@fortawesome/free-solid-svg-icons/faCopy';
@@ -22,15 +24,42 @@ import ContactInputFieldWidget from '../../widget/ContactInputFieldWidget/Contac
 import ContactTextAreaFieldWidget from '../../widget/ContactTextAreaFieldWidget/ContactTextAreaFieldWidget';
 import contactImage from '../../utils/Newsletter.png';
 
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 function ContactComponent({ data }) {
+
+  const [open, setOpen] = useState(false);
+  const [severity, setSeverity] = useState(false);
+  const [toastMessage, setToastMessage] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
+  };
+
+
   function sendEmail(e) {
     e.preventDefault();
 
     emailjs.sendForm('service_o73b2f9', 'template_3smr6sn', e.target, 'user_RmLLo70gSHG9OXndg2Oew')
       .then((result) => {
         console.log(result.text);
+        setSeverity('success')
+        setToastMessage('Ciao, ho ricevuto la tua richiesta e ti risponderò al più presto!')
+        handleClick()
       }, (error) => {
         console.log(error.text);
+        setSeverity('error')
+        setToastMessage('Ciao, si è verificato un errore durante l\'invio della richiesta. Puoi contattarmi anche telefonicamente o su Whatsapp, oppure sui social')
+        handleClick()
       });
     e.target.reset();
   }
@@ -167,6 +196,12 @@ function ContactComponent({ data }) {
           <img alt="contacts" src={contactImage} />
         </div>
       </Parallax>
+
+      <Snackbar open={open} autoHideDuration={10000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
+          {toastMessage}
+        </Alert>
+      </Snackbar>
 
       <WaveDividerWidget />
 

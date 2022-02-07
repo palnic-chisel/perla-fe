@@ -15,7 +15,7 @@
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     padding: 3rem;
-    height: fit-content;
+    height: 600px;
     background-color: rgba(255, 255, 255, .8);
     margin-bottom: 40px;
     margin-right: 3rem;
@@ -62,9 +62,10 @@
     border: 1px solid rgba(0, 0, 0, .1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     padding: 3rem;
-    height: fit-content;
+    height: 600px;
     background-color: rgba(255, 255, 255, .8);
     margin-bottom: 40px;
+    margin-right: 20px;
 }
 
 .contact-other-image-container {
@@ -85,7 +86,7 @@
 }
 
 .button {
-    width: fit-content;
+    width: 100%;
     margin-top: 20px;
     padding: 1rem;
     background-color: rgba(45, 152, 218, 1);
@@ -208,6 +209,7 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 5px;
         padding-top: 0;
     }
 
@@ -220,7 +222,37 @@ a {
     .contact-other-container {
         z-index: 100;
         max-width: 90vw;
-        margin-right: 0.5rem;
+        margin-right: 0.5rem;  
+        height: fit-content;      
+    }
+
+    .contact-container {
+        font-size: 12px;
+    }
+
+    .contact-container h1{
+        font-size: 20px;
+    }
+
+    .contact-container h2{
+        font-size: 15px;
+    }
+
+    .contact-form-container {
+        height: fit-content;
+        margin: 0;
+    }    
+    
+    .contact-form-container input {
+        height: 30px;
+    }
+
+    .button{
+        font-size: 10px;
+        margin: 0;
+        padding: 10px;
+        padding-top: 7px;
+        width: 100%;
     }
 
     .contact-other-image-container {
