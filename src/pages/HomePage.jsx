@@ -9,7 +9,7 @@ import LandingPageComponent from '../component/LandingPageComponent/LandingPageC
 import FrameWithBackgroundComponent from '../component/FrameWithBackgroundComponent/FrameWithBackgroundComponent';
 import PortfolioComponent from '../component/PortfolioComponent/PortfolioComponent';
 import FooterComponent from '../component/FooterComponent/FooterComponent';
-import LoadingPage from './LoadingPage/LoadingPage';
+// import LoadingPage from './LoadingPage/LoadingPage';
 import NavigationBarComponent from '../component/NavigationBarComponent/NavigationBarComponent';
 import SpeedDialWidget from '../widget/SpeedDialWidget/SpeedDialWidget';
 
