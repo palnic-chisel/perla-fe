@@ -21,7 +21,7 @@ function LandingPageComponent({ data }) {
     <div className="landing-page-container">
       <div className="landing-page-inner-container">
         <div data-aos="fade-right" className="landing-page-text-container">
-          <Parallax speed={-0.5}><span className="landing-page-section-title">{data?.title}</span></Parallax>
+          <Parallax speed={-0.5}><h1 className="landing-page-section-title">{data?.title}</h1></Parallax>
           <Parallax speed={1}>
             <div className="landing-page-section-description-container">
               <div className="landing-page-section-description">
