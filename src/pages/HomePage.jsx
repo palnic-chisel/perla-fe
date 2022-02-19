@@ -49,7 +49,8 @@ function HomePage() {
       );
     default:
       return (
-        <LoadingPage />
+        // <LoadingPage />
+          <span>Loading</span>
       );
   }
 }
