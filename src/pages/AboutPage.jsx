@@ -22,6 +22,8 @@ function AboutPage() {
         <div style={{ width: '100%' }}>
           <Helmet>
             <meta charSet="utf-8" />
+            <meta name="author" content="palnic"/>
+            <meta name="keywords" content="psicologa torino, meditazione torino, psicologa online, meditazione online, gestalt torino"/>
             <meta name="description" content="Chiara Ganga, psicologa e istruttrice di Mindfulness a Torino e Online. Psicologa, specializzanda in psicoterapia della Gestalt presso l'Istituto SGT di Torino. Puoi contattarmi telefonicamente oppure su Whatsapp al +39 3450383042 oppure via mail e social" />
             <title>Psicologa Chiara Ganga - Chi sono e formazione</title>
             <link rel="canonical" href="https://psicologachiaraganga.netlify.app/about" />

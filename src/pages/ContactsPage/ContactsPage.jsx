@@ -20,6 +20,7 @@ function ContactsPage() {
           <Helmet>
             <meta charSet="utf-8" />
             <meta name="description" content="Chiara Ganga, psicologa e istruttrice di Mindfulness a Torino e Online. Puoi contattarmi telefonicamente oppure su Whatsapp al +39 3450383042 oppure via mail e social" />
+            <meta name="keywords" content="psicologa torino, meditazione torino, psicologa online, meditazione online, gestalt torino"/>
             <title>Psicologa Chiara Ganga - Contatti</title>
             <link rel="canonical" href="https://psicologachiaraganga.netlify.app/contatti" />
           </Helmet>
