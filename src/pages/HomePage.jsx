@@ -50,7 +50,7 @@ function HomePage() {
     default:
       return (
         // <LoadingPage />
-          <span>Loading</span>
+          <div style={{height: '100vh', width: '100vw', display:'flex', alignItems: 'center', justifyContent: 'center'}}>Loading...</div>
       );
   }
 }
